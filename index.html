@@ -20,19 +20,8 @@
     </header>
 
     <main class="container">
-        <section class="hero">
-            <div class="hero-copy">
-                <span class="eyebrow">DISCIPLINA • CONSISTÊNCIA • EVOLUÇÃO</span>
-                <h1>Seu próximo nível<br>começa <span class="purple-text">hoje.</span></h1>
-                <p>Registre seus treinos, acompanhe sua evolução e transforme constância em resultado.</p>
-                <a href="#registrar" class="button primary-button">+ Registrar treino</a>
-            </div>
-            <div class="hero-symbol" aria-hidden="true">
-                <span>FT</span>
-                <div class="symbol-ring"></div>
-            </div>
-        </section>
 
+        <!-- EVOLUÇÃO: AGORA APARECE PRIMEIRO -->
         <section class="section" id="evolucao">
             <div class="section-heading">
                 <div>
@@ -40,6 +29,7 @@
                     <h2>Índice de evolução</h2>
                     <p class="muted">Acompanhe a sua consistência semana a semana.</p>
                 </div>
+
                 <label class="goal-control">
                     Meta semanal
                     <select id="meta-semanal" aria-label="Meta de treinos por semana">
@@ -59,6 +49,7 @@
                         <span class="panel-label">ÍNDICE DESTA SEMANA</span>
                         <span class="live-dot">● ATUAL</span>
                     </div>
+
                     <div class="score-content">
                         <div class="score-ring" id="score-ring" role="img" aria-label="Índice semanal: 0%">
                             <div class="score-ring-inner">
@@ -66,16 +57,23 @@
                                 <span>/100</span>
                             </div>
                         </div>
+
                         <div class="score-details">
                             <h3 id="status-indice">Vamos começar?</h3>
                             <p id="texto-indice">Cada treino registrado é um passo na direção da sua meta.</p>
+
                             <div class="progress-track">
                                 <div class="progress-fill" id="barra-meta"></div>
                             </div>
+
                             <p class="progress-caption" id="progresso-meta">0 de 4 treinos concluídos</p>
                         </div>
                     </div>
-                    <p class="score-note">O índice representa o cumprimento da sua meta de treinos, não uma avaliação médica ou medida direta de ganho muscular.</p>
+
+                    <p class="score-note">
+                        O índice representa o cumprimento da sua meta de treinos,
+                        não uma avaliação médica ou medida direta de ganho muscular.
+                    </p>
                 </article>
 
                 <article class="panel">
@@ -83,20 +81,33 @@
                         <span class="panel-label">RESUMO DA SEMANA</span>
                         <span class="mini-icon">↗</span>
                     </div>
+
                     <div class="stats-list">
                         <div class="stat-row">
                             <span class="stat-icon">✓</span>
-                            <div><span class="stat-label">Treinos concluídos</span><strong id="total-treinos">0</strong></div>
+                            <div>
+                                <span class="stat-label">Treinos concluídos</span>
+                                <strong id="total-treinos">0</strong>
+                            </div>
                         </div>
+
                         <div class="stat-row">
                             <span class="stat-icon">◷</span>
-                            <div><span class="stat-label">Tempo de atividade</span><strong id="total-minutos">0 min</strong></div>
+                            <div>
+                                <span class="stat-label">Tempo de atividade</span>
+                                <strong id="total-minutos">0 min</strong>
+                            </div>
                         </div>
+
                         <div class="stat-row">
                             <span class="stat-icon">ϟ</span>
-                            <div><span class="stat-label">Calorias estimadas</span><strong id="total-calorias">0 kcal</strong></div>
+                            <div>
+                                <span class="stat-label">Calorias estimadas</span>
+                                <strong id="total-calorias">0 kcal</strong>
+                            </div>
                         </div>
                     </div>
+
                     <div class="comparison">
                         <span class="stat-label">Comparação com a semana anterior</span>
                         <strong id="comparacao-semanal">Ainda sem comparação</strong>
@@ -104,15 +115,7 @@
                 </article>
             </div>
 
-            <article class="panel motivation-panel" aria-live="polite">
-                <div class="motivation-icon" id="icone-motivacao">✦</div>
-                <div class="motivation-copy">
-                    <span class="eyebrow">RECADO DO FITTRACK</span>
-                    <h3 id="titulo-motivacao">A consistência começa com uma decisão.</h3>
-                    <p id="mensagem-motivacao">Não espere a motivação perfeita. Organize sua rotina e cumpra o próximo passo possível.</p>
-                </div>
-            </article>
-
+            <!-- VISÃO SEMANAL ANTES DA MENSAGEM MOTIVACIONAL -->
             <article class="panel week-panel">
                 <div class="section-heading compact-heading">
                     <div>
@@ -121,11 +124,43 @@
                     </div>
                     <span class="week-range" id="intervalo-semana"></span>
                 </div>
+
                 <div class="week-grid" id="grade-semana"></div>
-                <p class="muted small-text">Os dias mostram os treinos registrados como concluídos nesta semana.</p>
+
+                <p class="muted small-text">
+                    Os dias mostram os treinos registrados como concluídos nesta semana.
+                </p>
+            </article>
+
+            <!-- MENSAGEM MOTIVACIONAL MAIS ABAIXO -->
+            <article class="panel motivation-panel" aria-live="polite">
+                <div class="motivation-icon" id="icone-motivacao">✦</div>
+                <div class="motivation-copy">
+                    <span class="eyebrow">RECADO DO FITTRACK</span>
+                    <h3 id="titulo-motivacao">A consistência começa com uma decisão.</h3>
+                    <p id="mensagem-motivacao">
+                        Não espere a motivação perfeita. Organize sua rotina e cumpra o próximo passo possível.
+                    </p>
+                </div>
             </article>
         </section>
 
+        <!-- APRESENTAÇÃO DO APLICATIVO -->
+        <section class="hero">
+            <div class="hero-copy">
+                <span class="eyebrow">DISCIPLINA • CONSISTÊNCIA • EVOLUÇÃO</span>
+                <h1>Seu próximo nível<br>começa <span class="purple-text">hoje.</span></h1>
+                <p>Registre seus treinos, acompanhe sua evolução e transforme constância em resultado.</p>
+                <a href="#registrar" class="button primary-button">+ Registrar treino</a>
+            </div>
+
+            <div class="hero-symbol" aria-hidden="true">
+                <span>FT</span>
+                <div class="symbol-ring"></div>
+            </div>
+        </section>
+
+        <!-- FORMULÁRIO DE TREINO -->
         <section class="section" id="registrar">
             <div class="section-heading">
                 <div>
@@ -141,6 +176,7 @@
                         <span>Data do treino</span>
                         <input type="date" id="data-treino" required>
                     </label>
+
                     <label class="field">
                         <span>Tipo de treino</span>
                         <select id="tipo-treino" required>
@@ -151,14 +187,17 @@
                             <option value="Outro">Outro</option>
                         </select>
                     </label>
+
                     <label class="field">
                         <span>Duração (minutos)</span>
                         <input type="number" id="duracao" min="1" max="600" placeholder="Ex.: 60" required>
                     </label>
+
                     <label class="field">
                         <span>Seu peso (kg)</span>
                         <input type="number" id="peso" min="25" max="350" step="0.1" value="74" required>
                     </label>
+
                     <label class="field">
                         <span>Intensidade</span>
                         <select id="intensidade">
@@ -167,6 +206,7 @@
                             <option value="intensa">Intensa</option>
                         </select>
                     </label>
+
                     <label class="field">
                         <span>Status do treino</span>
                         <select id="status-treino">
@@ -179,10 +219,13 @@
                 <div class="catalog-heading">
                     <div>
                         <h3>Catálogo de exercícios</h3>
-                        <p class="muted small-text">Selecione os exercícios realizados. Você pode escolher mais de um grupo.</p>
+                        <p class="muted small-text">
+                            Selecione os exercícios realizados. Você pode escolher mais de um grupo.
+                        </p>
                     </div>
                     <span class="selection-count" id="contador-exercicios">0 selecionados</span>
                 </div>
+
                 <div id="catalogo-exercicios" class="catalog-grid"></div>
 
                 <label class="field notes-field">
@@ -194,10 +237,12 @@
                     <button type="submit" class="button primary-button" id="botao-salvar">Salvar treino</button>
                     <button type="button" class="button secondary-button hidden" id="botao-cancelar">Cancelar edição</button>
                 </div>
+
                 <p class="form-feedback" id="feedback-form" role="status"></p>
             </form>
         </section>
 
+        <!-- HISTÓRICO -->
         <section class="section" id="historico">
             <div class="section-heading history-heading">
                 <div>
@@ -207,11 +252,15 @@
                 </div>
                 <button type="button" class="button danger-button" id="limpar-historico">Limpar histórico</button>
             </div>
+
             <div class="history-list" id="lista-historico"></div>
         </section>
 
         <footer class="footer">
-            <a class="brand footer-brand" href="#"><span class="brand-icon">F</span><span>FIT<span class="purple-text">TRACK</span></span></a>
+            <a class="brand footer-brand" href="#">
+                <span class="brand-icon">F</span>
+                <span>FIT<span class="purple-text">TRACK</span></span>
+            </a>
             <p>Resultados são construídos com consistência, recuperação e paciência.</p>
             <small>As calorias são estimativas e podem variar conforme cada pessoa e atividade.</small>
         </footer>
